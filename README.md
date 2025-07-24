@@ -18,42 +18,46 @@ pytest
 pytest --html=reports/report.html
 
 High Level Project Structure
+```
 saucedemo-tests/
-├── .gitignore             # Specifies intentionally untracked files to ignore
-├── README.md              # Project documentation
-├── requirements.txt       # Python dependencies
-├── pytest.ini             # Pytest configuration
-├── conftest.py            # Pytest fixtures and hooks
 │
-├── features/              # BDD feature files
-│   ├── login.feature      # Login scenarios in Gherkin
-│   ├── cart.feature       # Shopping cart scenarios
-│   └── steps/             # Step definition implementations
-│       ├── __init__.py    # Makes steps a Python package
-│       ├── login_steps.py # Login step definitions
-│       └── cart_steps.py  # Cart step definitions
+├── .gitignore                  # Specifies intentionally untracked files to ignore
+├── README.md                    # Project documentation
+├── requirements.txt             # Python dependencies
+├── pytest.ini                   # Pytest configuration
+├── conftest.py                  # Pytest fixtures and hooks
 │
-├── pages/                 # Page Object Model
-│   ├── __init__.py        # Makes pages a Python package
-│   ├── base_page.py       # Base page with common methods
-│   ├── login_page.py      # Login page elements and actions
-│   ├── inventory_page.py  # Product inventory page
-│   └── cart_page.py       # Shopping cart page
+├── features/                    # BDD feature files
+│   ├── login.feature            # Login scenarios in Gherkin
+│   └── cart.feature             # Shopping cart scenarios
 │
-├── utils/                 # Utility functions
-│   ├── browser.py         # Browser management utilities
-│   └── helpers.py         # Common helper functions
+├── steps/                       # Step definition implementations
+│   ├── __init__.py              # Makes steps a Python package
+│   ├── login_steps.py           # Login step definitions
+│   └── cart_steps.py            # Cart step definitions
 │
-├── drivers/               # WebDriver executables
-│   └── chromedriver.exe   # ChromeDriver binary
+├── pages/                       # Page Object Model
+│   ├── __init__.py              # Makes pages a Python package
+│   ├── base_page.py             # Base page with common methods
+│   ├── login_page.py            # Login page elements and actions
+│   ├── inventory_page.py        # Product Inventory page
+│   └── cart_page.py             # Shopping cart page
 │
-├── reports/               # Test output
-│   ├── html/              # HTML test reports
-│   └── logs/              # Execution logs
+├── utils/                       # Utility functions
+│   ├── browser.py               # Browser management utilities
+│   └── helpers.py               # Common helper functions
 │
-└── tests/                 # Additional test modules (optional)
+├── drivers/                     # WebDriver executables
+│   └── chromedriver.exe         # ChromeDriver binary
+│
+├── reports/                     # Test output
+│   ├── html/                    # HTML test reports
+│   └── logs/                    # Execution logs
+│
+└── tests/                       # Additional test modules (optional)
     ├── __init__.py
-    └── unit/              # Unit tests (if applicable)
+    └── unit/                    # Unit tests (if applicable)
+```
 
 
 
